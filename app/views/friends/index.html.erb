@@ -1,0 +1,33 @@
+<h1>Friends List</h1>
+
+<div id="friends">
+    <table class="table">
+        <tr>
+            <td>
+                <strong>First name</strong>
+            </td>
+            <td>
+                <strong>Last name</strong>
+            </td>
+            <td>
+                <strong>Email</strong>
+            </td>
+            <td>
+                <strong>Phone</strong>
+            </td>
+            <td>
+                <strong>Twitter</strong>
+            </td>
+            <td>
+                <strong>Actions</strong>
+            </td>
+
+        </tr>
+
+        <% @friends.each do |friend| %>
+            <%= render friend %>
+        <% end %>
+    </table>
+</div>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary"%>
